@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<Standortverzeichnis xmlns="http://xml.inek.org/schema/Standortverzeichnis" xsi:schemaLocation="http://xml.inek.org/schema/Standortverzeichnis" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- This testfile is a "bad" one, which means it contains data that is incorrect or simply missing. 
+It consists of two Krankenhäuser and two Standorte, but the second Krankenhaus has an empty Bezeichnung. -->
+
+    <Dateikopf>
+        <Dateinummer>01</Dateinummer>
+        <XmlSchemaVersion>1.2.0</XmlSchemaVersion>
+        <LetzteÄnderung>2022-08-05</LetzteÄnderung>
+        <Erstelldatum>2022-08-05</Erstelldatum>      
+    </Dateikopf>
+
+<!-- First Krankenhaus-->
+    <Krankenhaus>
+        <Version>001</Version>
+        <GültigVon>2019-01-01</GültigVon>
+        
+        <LetzteÄnderung>2019-08-01</LetzteÄnderung>
+        
+        <HauptIK>
+            <IK>123456789</IK>
+            <GültigVon>2019-01-01</GültigVon>
+            
+        </HauptIK>
+            
+        <Bezeichnung>Erstes Testhospital</Bezeichnung>
+        <Ermächtigungsgrundlage>2</Ermächtigungsgrundlage>
+        <Träger>Stiftung der Testhospitale</Träger>
+        <Trägerart>f</Trägerart>
+        <Rechtsform>13</Rechtsform>
+        <SitzGesellschaft>Testdorf</SitzGesellschaft>
+        <Registriergericht>Amtsgericht Test</Registriergericht>
+        <Registriernummer>21.13-J4</Registriernummer>
+    </Krankenhaus>
+  
+  <!-- Second Krankenhaus-->  
+        <Krankenhaus>
+        <Version>001</Version>
+        <GültigVon>2017-01-01</GültigVon>
+        <GültigBis>2999-01-01</GültigBis>
+        <LetzteÄnderung>2018-08-01</LetzteÄnderung>
+        
+        <HauptIK>
+            <IK>987654321</IK>
+            <GültigVon>2020-01-01</GültigVon>
+            
+        </HauptIK>
+            
+        <Bezeichnung></Bezeichnung>
+        <Ermächtigungsgrundlage>2</Ermächtigungsgrundlage>
+        <Träger>Stiftung der anderen Testhospitale</Träger>
+        <Trägerart>f</Trägerart>
+        <Rechtsform>13</Rechtsform>
+        <SitzGesellschaft>Anderesdorf</SitzGesellschaft>
+        <Registriergericht>Testgericht Teststadt</Registriergericht>
+        <Registriernummer>21.13-J4</Registriernummer>
+    </Krankenhaus>
+    
+  
+ <!-- First Standort, belonging to first Krankenhaus, contains no GültigBis and one Einrichtung-->               
+    <Standort>
+        <Version>004</Version>
+        <GültigVon>2019-01-01</GültigVon>    
+        <LetzteÄnderung>2022-08-05</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>123456789</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>123456</StandortId>
+        <Bezeichnung>Teststandort Eins</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>395131</GeoreferenzOst>
+            <GeoreferenzNord>5810499</GeoreferenzNord>
+            <Längengrad>13.457398903429</Längengrad>
+            <Breitengrad>52.434620577035</Breitengrad>
+            <PLZ>12345</PLZ>
+            <Ort>Teststadt</Ort>
+            <Straße>Erste Teststraße</Straße>
+            <Hausnummer>42</Hausnummer>
+            
+        </GeoAdresse>
+        <Gemeindeschlüssel>11000008</Gemeindeschlüssel>
+        <KVBezirk>72</KVBezirk>
+        <Bundesland>11</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>12345</PLZ>
+            <Ort>Teststadt Eins</Ort>
+            <StraßePostfach>Erste Teststraße</StraßePostfach>
+            <Hausnummer>42</Hausnummer>
+        </PostAdresse>
+        
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>773194000</Standortnummer>
+            <GültigVon>2019-01-01</GültigVon>
+            <Name>Testeinrichtung Eins - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33</GeoreferenzZone>
+                <GeoreferenzOst>395131</GeoreferenzOst>
+                <GeoreferenzNord>5810499</GeoreferenzNord>
+                <Längengrad>13.457398903429</Längengrad>
+                <Breitengrad>52.434620577035</Breitengrad>
+                <PLZ>12345</PLZ>
+                <Ort>Teststadt Eins</Ort>
+                <Straße>Erste Teststraße</Straße>
+                <Hausnummer>42</Hausnummer>
+                
+            </GeoAdresse>
+            
+            <AbrechnungsIK>
+                <IK>123456789</IK>
+                <GültigVon>2019-01-01</GültigVon>
+                <GültigBis>2999-04-03</GültigBis>
+            </AbrechnungsIK>
+                    
+            <Betriebsstättennummer>
+                <BSNR>999999999</BSNR>
+                <GültigVon>2019-01-01</GültigVon>
+                <GültigBis>2999-04-03</GültigBis>
+            </Betriebsstättennummer>
+                
+        </Einrichtung>
+            
+    </Standort> 
+
+<!-- Second Standort, belonging to second Krankenhaus, contains GültigBis and two Einrichtung-->                        
+    <Standort>
+        <Version>002</Version>
+        <GültigVon>2018-01-01</GültigVon>    
+        <GültigBis>2999-12-31</GültigBis>
+        <LetzteÄnderung>2020-09-18</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>54321</StandortId>
+        <Bezeichnung>Hauptstandort</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>32U</GeoreferenzZone>
+            <GeoreferenzOst>416732</GeoreferenzOst>
+            <GeoreferenzNord>5735239</GeoreferenzNord>
+            <Längengrad>7.793447166673</Längengrad>
+            <Breitengrad>51.761843160121</Breitengrad>
+            <PLZ>54321</PLZ>
+            <Ort>Teststadt Zwei</Ort>
+            <Straße>Zweite Teststraße</Straße>
+            <Hausnummer>24</Hausnummer>
+            
+        </GeoAdresse>
+        <Gemeindeschlüssel>05570016</Gemeindeschlüssel>
+        <KVBezirk>20</KVBezirk>
+        <Bundesland>05</Bundesland>
+        <Adresstyp>1</Adresstyp>
+        <PostAdresse>
+            <PLZ>54321</PLZ>
+            <Ort>Teststadt Zwei</Ort>
+            <StraßePostfach>Zweite Teststraße</StraßePostfach>
+            <Hausnummer>24</Hausnummer>
+        </PostAdresse>
+        
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>773627000</Standortnummer>
+            <GültigVon>2018-01-01</GültigVon>
+            
+            <Name>Testeinrichtung Zwei - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>32</GeoreferenzZone>
+                <GeoreferenzOst>416732</GeoreferenzOst>
+                <GeoreferenzNord>5735239</GeoreferenzNord>
+                <Längengrad>7.793447166673</Längengrad>
+                <Breitengrad>51.761843160121</Breitengrad>
+                <PLZ>54321</PLZ>
+                <Ort>Teststadt Zwei</Ort>
+                <Straße>Zweite Teststraße</Straße>
+                <Hausnummer>24</Hausnummer>
+                
+            </GeoAdresse>
+            
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2018-01-01</GültigVon>
+                
+            </AbrechnungsIK>
+                    
+            <Betriebsstättennummer>
+                <BSNR>999999999</BSNR>
+                <GültigVon>2018-01-01</GültigVon>
+                
+            </Betriebsstättennummer>
+                
+        </Einrichtung>
+            
+        <Einrichtung>
+            <Einrichtungstyp>05</Einrichtungstyp>
+            <Standortnummer>773627005</Standortnummer>
+            <GültigVon>2020-01-01</GültigVon>
+            
+            <Name>Psychiatrische Institutsambulanz</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>32</GeoreferenzZone>
+                <GeoreferenzOst>416732</GeoreferenzOst>
+                <GeoreferenzNord>5735243</GeoreferenzNord>
+                <Längengrad>7.7934448868</Längengrad>
+                <Breitengrad>51.761875947161</Breitengrad>
+                <PLZ>98765</PLZ>
+                <Ort>Andere Teststadt</Ort>
+                <Straße>Andere Teststraße</Straße>
+                <Hausnummer>99</Hausnummer>
+                
+            </GeoAdresse>
+            
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2020-01-01</GültigVon>
+                
+            </AbrechnungsIK>
+                    
+            <Betriebsstättennummer>
+                <BSNR>197422400</BSNR>
+                <GültigVon>2020-01-01</GültigVon>
+                
+            </Betriebsstättennummer>
+                
+        </Einrichtung>
+    </Standort>
+            
+
+</Standortverzeichnis>
